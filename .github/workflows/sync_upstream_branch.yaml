@@ -1,11 +1,8 @@
 name: 'Sync Upstream Branch'
 
 on:
-  push:
-    branches:
-      - actions
   schedule:
-    - cron:  '5 * * * *' # scheduled at the top of every hour
+    - cron: '0 */4 * * *' # scheduled every 4 hours
   workflow_dispatch:
 
 jobs:
